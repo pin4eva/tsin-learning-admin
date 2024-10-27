@@ -5,7 +5,12 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-
+  runtimeConfig: {
+    public: {
+      API_URL: process.env.API_URL || "",
+      JWT_TOKEN: process.env.JWT_TOKEN || "",
+    }
+  },
   devtools: { enabled: true },
   modules: ['@nuxt/ui']
 })
